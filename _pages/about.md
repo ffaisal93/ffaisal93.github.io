@@ -16,7 +16,7 @@ social: false  # includes social icons at the bottom of the page
 
 Hi there, I'm Emily!
 
-I'm a Ph.D. student in the [Department of Computer Science](https://colorado.edu/cs) and the [Institute of Cognitive Science](https://colorado.edu/ics) at CU Boulder advised by [Sriram Sankaranarayanan](https://home.cs.colorado.edu/~srirams/index.html) and [Brad Hayes](http://www.bradhayes.info/). In general, I'm interested in using autonomous systems to teach people complex tasks. You can read more on my research page (coming soon).
+I'm a Ph.D. student in the [Department of Computer Science](https://colorado.edu/cs) and the [Institute of Cognitive Science](https://colorado.edu/ics) at CU Boulder advised by [Sriram Sankaranarayanan](https://home.cs.colorado.edu/~srirams/index.html) and [Brad Hayes](http://www.bradhayes.info/). In general, I'm interested in using autonomous systems to teach people complex tasks. You can read more on my [research page](https://emilykjensen.com/research/).
 
 One of my goals in grad school is to maintain a life outside of grad school; depending on the day, you can find me drinking tea, reading dystopian novels, knitting, running or hitting the trails (sometimes at the same time), and messing around on my piano. I also sporadically post an open diary of sorts (coming soon) on this site to show that goals, motivation, and progress through grad school (and life) isn't anywhere close to linear.
 
