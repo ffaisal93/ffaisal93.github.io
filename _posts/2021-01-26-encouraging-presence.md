@@ -3,8 +3,8 @@ layout: post
 title:  Encouraging Presence Workshop
 date:   2021-01-26
 description: 
-tags: 
-categories: professional-development
+tags: professional-development
+categories: 
 ---
 
 # The details

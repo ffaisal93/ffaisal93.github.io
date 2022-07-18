@@ -3,8 +3,8 @@ layout: post
 title:  Personal Values Quiz
 date:   2021-01-14
 description: 
-tags: 
-categories: professional-development
+tags: professional-development
+categories: 
 ---
 
 One of the topics we discussed in the recent Endurance PhD Intensive was the importance of matching your goals with your personal values. I just completed [this quiz](https://personalvalu.es/personal-values-list) to rank my top values. I originally selected 22 values from the list, and the quiz reported my top 5 [results here](https://personalvalu.es/results/4309691d-3384-45fe-aace-55fdb394aae6). This quiz was difficult because I felt like so many of the values were related to me. The way I made my decision in a tie was ask which value was _a result of_ the other value? More details of how I nested these values is below.

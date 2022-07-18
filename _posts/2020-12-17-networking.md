@@ -3,8 +3,8 @@ layout: post
 title:  Networking Workshop
 date:   2020-12-17
 description: 
-tags: 
-categories: professional-development
+tags: professional-development
+categories: 
 ---
 
 # The details

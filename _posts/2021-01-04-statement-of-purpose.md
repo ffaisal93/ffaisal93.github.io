@@ -3,8 +3,8 @@ layout: post
 title:  Writing a Statement of Purpose
 date:   2021-01-07
 description: 
-tags: 
-categories: advice
+tags: advice
+categories: 
 ---
 
 When I was applying to grad school, I had no idea what to include in my statement of purpose. My statement ended up including big, lofty topics and goals that I could never reach during the course of the PhD. After helping others with their applications, here are my personal thoughts on content and how to structure the statement of purpose. 

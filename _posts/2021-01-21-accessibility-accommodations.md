@@ -3,8 +3,8 @@ layout: post
 title:  Accessibility and Accommodations Workshop
 date:   2021-01-21
 description: 
-tags: 
-categories: professional-development
+tags: professional-development
+categories: 
 ---
 
 # The details

@@ -3,8 +3,8 @@ layout: post
 title:  Student Mental Health Workshop
 date:   2021-01-25
 description: 
-tags: 
-categories: professional-development
+tags: professional-development
+categories: 
 ---
 
 # The details

@@ -3,8 +3,8 @@ layout: post
 title:  Hidden Curriculum Workshop
 date:   2021-08-10
 description: 
-tags: 
-categories: professional-development
+tags: professional-development
+categories: 
 ---
 
 # The details

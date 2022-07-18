@@ -3,8 +3,8 @@ layout: post
 title:  Endurance PhD Intensive
 date:   2021-01-11
 description: 
-tags: 
-categories: professional-development
+tags: professional-development
+categories: 
 ---
 
 # The details
