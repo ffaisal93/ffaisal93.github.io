@@ -98,15 +98,25 @@
 	pages = {294--303},
 }
 
-@inproceedings{Jensen2022,
-	abbr={arXiv},
+@inproceedings{Jensen2022ITSC,
+	abbr={ITSC},
 	title = {Mathematical {Models} of {Human} {Drivers} {Using} {Artificial} {Risk} {Fields}},
 	html = {http://arxiv.org/abs/2205.12722},
 	doi = {10.48550/arXiv.2205.12722},
 	abstract = {In this paper, we use the concept of artificial risk fields to predict how human operators control a vehicle in response to upcoming road situations. A risk field assigns a non-negative risk measure to the state of the system in order to model how close that state is to violating a safety property, such as hitting an obstacle or exiting the road. Using risk fields, we construct a stochastic model of the operator that maps from states to likely actions. We demonstrate our approach on a driving task wherein human subjects are asked to drive a car inside a realistic driving simulator while avoiding obstacles placed on the road. We show that the most likely risk field given the driving data is obtained by solving a convex optimization problem. Next, we apply the inferred risk fields to generate distinct driving behaviors while comparing predicted trajectories against ground truth measurements. We observe that the risk fields are excellent at predicting future trajectory distributions with high prediction accuracy for up to twenty seconds prediction horizons. At the same time, we observe some challenges such as the inability to account for how drivers choose to accelerate/decelerate based on the road conditions.},
 	booktitle={Intelligent Transportation Systems Conference},
 	author = {Jensen, Emily and Luster, Maya and Yoon, Hansol and Pitts, Brandon and Sankaranarayanan, Sriram},
-	month = may,
+	month = october,
 	year = {2022},
 	poster={https://github.com/emilykjensen/emilykjensen.github.io/blob/master/assets/pptx/risk_field_poster.pptx},
+}
+
+@inproceedings{Jensen2022CPHS,
+	abbr={CPHS},
+	title = {Using Artificial Potential Fields To Model Driver Situational Awareness},
+	abstract = {Recently, the use of artificial potential fields, known as risk fields, has been proposed for modeling human driver decision making. Such potential fields map from vehicle states and control inputs to a numerical risk measure such that the probability of choosing a control  decreases as the risk associated increases. In this paper, we show that such a model can be used in a natural manner to also capture aspects of the driver's situational awareness, assuming that the risk fields govern their underlying behavior. We demonstrate our ideas on a specific obstacle avoidance scenario wherein obstacles to be avoided are placed in front of a driver at predicable intervals. Using data collected on a pilot experiment involving six different drivers using a high-fidelity driving simulator, we demonstrate the ability of our approach to capture the likelihood that the driver has perceived/reacted to the obstacle. Our approach works for scenarios when the driver collides with the obstacle as well as scenarios involving successful collision avoidance.},
+	booktitle={4th IFAC Workshop on Cyber-Physical Human-Systems},
+	author = {Jensen, Emily and Luster, Maya and Pitts, Brandon and Sankaranarayanan, Sriram},
+	month = december,
+	year = {2022},
 }
