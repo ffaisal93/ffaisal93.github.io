@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: x# the website title (if blank, full name will be used instead)
-first_name: x
+title: Fahim Faisal # the website title (if blank, full name will be used instead)
+first_name: Fahim
 middle_name: 
-last_name: xn
+last_name: Faisal
 email: ffaisal@gmu.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
@@ -14,7 +14,7 @@ footer_text: >
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 📚  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: ✍🏼  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://ffaisal93.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
@@ -53,11 +53,11 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: emilykjensen # your GitHub user name
+github_username: ffaisal93 # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: # your Twitter handle
-linkedin_username: emilykjensen # your LinkedIn user name
-scholar_userid: # your Google Scholar ID
+twitter_username: faisal_thesis # your Twitter handle
+linkedin_username: faisalfahim # your LinkedIn user name
+scholar_userid: 4NgtQ2EAAAAJ&hl # your Google Scholar ID
 orcid_id: # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
@@ -205,8 +205,8 @@ display_tags: ['lists','advice','professional-development'] # this tags will be 
 
 scholar:
 
-  last_name: Jensen
-  first_name: [Emily, E.]
+  last_name: Faisal
+  first_name: [Fahim]
 
   style: apa
   locale: en
