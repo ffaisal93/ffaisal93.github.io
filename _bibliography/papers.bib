@@ -1,122 +1,142 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
+% @string{aps = {American Physical Society,}}
 
-@inproceedings{bryan_classification_2018,
-  abbr={JRC},
-	title = {Classification of {Rail} {Switch} {Data} {Using} {Machine} {Learning} {Techniques}},
-	abstract = {Rail switches are critical infrastructure components of a railroad network, that must maintain high-levels of reliable operation. Given the vast number and variety of switches that can exist across a rail network, there is an immediate need for robust automated methods of detecting switch degradations and failures without expensive add-on equipment. In this work, we explore two recent machine learning frameworks for classifying various switch degradation indicators: (1) a featureless recurrent neu-ral network called a Long Short-Term Memory (LSTM) architecture , and (2), the Deep Wavelet Scattering Transform (DWST), which produces features that are locally time invariant and stable to time-warping deformations. We describe both methods as they apply to rail switch monitoring and demonstrate their feasibility on a dataset captured under the service conditions by Al-stom Corporation. For multiple categories of degradation types, the baseline models consistently achieve near-perfect accuracies and are competitive with the manual analysis conducted by human switch-maintenance experts.},
-	booktitle = {Proceedings of the 2018 {Joint} {Rail} {Conference}},
-	author = {Bryan, Kaylen J and Solomon, Mitchell and Jensen, Emily and Coley, Christina and Rajan, Kailas and Tian, Charlie and Mijatovic, Nenad and Kiss, James M and Lamoureux, Benjamin and Dersin, Pierre and Smith, Anthony O and Peter, Adrian M},
-	year = {2018},
-	pages = {1--10},
+
+@INPROCEEDINGS{8975447,
+	abbr={ICAEE},
+  author={Faisal, Fahim and Bhuiyan, Shafkat Ahmed and Ashraf, Faisal Bin and Kamal, Abu Raihan Mostofa},
+  booktitle={2019 5th International Conference on Advances in Electrical Engineering (ICAEE)}, 
+  title={A Framework For Disease Identification From Unstructured Data Using Text Classification And Disease Knowledge Base}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={547-554},
+  doi={10.1109/ICAEE48663.2019.8975447},
+  bibtex_show={}}
+  
+
+
+@inproceedings{mahmud-etal-2021-code,
+		abbr={NLP4Prog},
+    title = "Code to Comment Translation: A Comparative Study on Model Effectiveness {\&} Errors",
+    author = "Mahmud, Junayed  and
+      Faisal, Fahim  and
+      Arnob, Raihan Islam  and
+      Anastasopoulos, Antonios  and
+      Moran, Kevin",
+    booktitle = "Proceedings of the 1st Workshop on Natural Language Processing for Programming (NLP4Prog 2021)",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.nlp4prog-1.1",
+    doi = "10.18653/v1/2021.nlp4prog-1.1",
+    pages = "1--16",
+    abstract = "Automated source code summarization is a popular software engineering research topic wherein machine translation models are employed to {``}translate{''} code snippets into relevant natural language descriptions. Most evaluations of such models are conducted using automatic reference-based metrics. However, given the relatively large semantic gap between programming languages and natural language, we argue that this line of research would benefit from a qualitative investigation into the various error modes of current state-of-the-art models. Therefore, in this work, we perform both a quantitative and qualitative comparison of three recently proposed source code summarization models. In our quantitative evaluation, we compare the models based on the smoothed BLEU-4, METEOR, and ROUGE-L machine translation metrics, and in our qualitative evaluation, we perform a manual open-coding of the most common errors committed by the models when compared to ground truth captions. Our investigation reveals new insights into the relationship between metric-based performance and model prediction errors grounded in an error taxonomy that can be used to drive future research efforts.",
+    pdf={https://aclanthology.org/2021.nlp4prog-1.1.pdf},
+    bibtex_show={}
 }
 
-@inproceedings{Jensen2019,
-  abbr={EDM},
-	title = {Generalizability of {Sensor}-{Free} {Affect} {Detection} {Models} in a {Longitudinal} {Dataset} of {Tens} of {Thousands} of {Students}},
-	booktitle = {The 12th {International} {Conference} on {Educational} {Data} {Mining}},
-	author = {Jensen, Emily and Hutt, Stephen and D’Mello, Sidney K.},
-	abstract={Recent work in predictive modeling has called for increased scrutiny of how models generalize between different populations within the training data. Using interaction data from 69,174 students who used an online mathematics platform over an entire school year, we trained a sensor-free affect detection model and studied its generalizability to clusters of students based on typical platform use and demographic features. We show that models trained on one group perform similarly well when tested on the other groups, although there was a small advantage obtained by training individual subpopulation models compared to a general (all-population) model. Lastly, we perform a series of simulations to show how generalizability is affected by sample size. These results agree with our initial analysis that individual subpopulation models yield a small advantage over all-population models. Additionally, we show that training sizes smaller than 1,500 yield unstable models which make generalizability difficult to interpret. We discuss applications of this work in the context of developing large-scale affect detection models for diverse populations.},
-	editor = {Desmarais, Michel and Lynch, Collin F. and Merceron, Agathe and Nkambou, Roger},
-	year = {2019},
-	pages = {324--329},
+@inproceedings{faisal-etal-2022-dataset,
+		abbr={ACL},
+    title = "Dataset Geography: Mapping Language Data to Language Users",
+    author = "Faisal, Fahim  and
+      Wang, Yinkai  and
+      Anastasopoulos, Antonios",
+    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.acl-long.239",
+    doi = "10.18653/v1/2022.acl-long.239",
+    pages = "3381--3411",
+    abstract = "As language technologies become more ubiquitous, there are increasing efforts towards expanding the language diversity and coverage of natural language processing (NLP) systems. Arguably, the most important factor influencing the quality of modern NLP systems is data availability. In this work, we study the geographical representativeness of NLP datasets, aiming to quantify if and by how much do NLP datasets match the expected needs of the language speakers. In doing so, we use entity recognition and linking systems, also making important observations about their cross-lingual consistency and giving suggestions for more robust evaluation. Last, we explore some geographical and economic factors that may explain the observed dataset distributions.",
+    pdf={https://aclanthology.org/2022.acl-long.239.pdf},
+    code={https://github.com/ffaisal93/dataset_geography},
+    poster={[ACL-2022]-dataset_geography-POSTER.pdf},
+    slides={[ACL-2022]-dataset_geography.pdf},
+    website={https://nlp.cs.gmu.edu/project/datasetmaps/},
+    selected={true},
+    bibtex_show={}
+
+}
+
+@inproceedings{faisal-etal-2021-sd-qa,
+		abbr={EMNLP},
+    title = "{SD}-{QA}: Spoken Dialectal Question Answering for the Real World",
+    author = "Faisal, Fahim  and
+      Keshava, Sharlina  and
+      Alam, Md Mahfuz Ibn  and
+      Anastasopoulos, Antonios",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2021",
+    month = nov,
+    year = "2021",
+    address = "Punta Cana, Dominican Republic",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.findings-emnlp.281",
+    pages = "3296--3315",
+    selected={true},
+    abstract = "Question answering (QA) systems are now available through numerous commercial applications for a wide variety of domains, serving millions of users that interact with them via speech interfaces. However, current benchmarks in QA research do not account for the errors that speech recognition models might introduce, nor do they consider the language variations (dialects) of the users. To address this gap, we augment an existing QA dataset to construct a multi-dialect, spoken QA benchmark on five languages (Arabic, Bengali, English, Kiswahili, Korean) with more than 68k audio prompts in 24 dialects from 255 speakers. We provide baseline results showcasing the real-world performance of QA systems and analyze the effect of language variety and other sensitive speaker attributes on downstream performance. Last, we study the fairness of the ASR and QA models with respect to the underlying user populations.",
+    bibtex_show={}
+}
+
+@inproceedings{faisal-anastasopoulos-2021-investigating,
+		abbr = {MRQA},
+    title = "Investigating Post-pretraining Representation Alignment for Cross-Lingual Question Answering",
+    author = "Faisal, Fahim  and
+      Anastasopoulos, Antonios",
+    booktitle = "Proceedings of the 3rd Workshop on Machine Reading for Question Answering",
+    month = nov,
+    year = "2021",
+    address = "Punta Cana, Dominican Republic",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.mrqa-1.14",
+    pages = "133--148",
+    abstract = "Human knowledge is collectively encoded in the roughly 6500 languages spoken around the world, but it is not distributed equally across languages. Hence, for information-seeking question answering (QA) systems to adequately serve speakers of all languages, they need to operate cross-lingually. In this work we investigate the capabilities of multilingually pretrained language models on cross-lingual QA. We find that explicitly aligning the representations across languages with a post-hoc finetuning step generally leads to improved performance. We additionally investigate the effect of data size as well as the language choice in this fine-tuning step, also releasing a dataset for evaluating cross-lingual QA systems.",
+    bibtex_show={}
+}
+
+
+
+
+
+@article{phylogeny,
+	abbr = {AACL},
+  url = {https://arxiv.org/abs/2205.09634},
+  
+  author = {Faisal, Fahim and Anastasopoulos, Antonios},
+  
+  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Phylogeny-Inspired Adaptation of Multilingual Models to New Languages},
+  journal={Accepted for publication in AACL 2022},
+  publisher = {arXiv},
   selected={true},
-  html={https://drive.google.com/file/d/1kRyhcP9Wxd74xiZMsGW89dNO5sBVtAx1/view},
-  slides={https://github.com/emilykjensen/emilykjensen.github.io/blob/master/assets/pptx/Jensen_EDM19_slides.pptx},
+  year = {2022},
+  
+  copyright = {Creative Commons Attribution 4.0 International},
+  arxiv={2205.09634},
+  code={https://github.com/ffaisal93/adapt_lang_phylogeny},
+  bibtex_show={}
 }
 
-@inproceedings{Jensen2020,
-  abbr={CHI},
-	title = {Toward {Automated} {Feedback} on {Teacher} {Discourse} to {Enhance} {Teacher} {Learning}},
-	isbn = {978-1-4503-6708-0},
-	doi = {10.1145/3313831.3376418},
-	booktitle = {2020 {CHI} {Conference} on {Human} {Factors} in {Computing} {Systems} {Proceedings} ({CHI} 2020)},
-	publisher = {ACM Press},
-	author = {Jensen, Emily and Dale, Meghan and Donnelly, Patrick J. and Stone, Cathlyn and Kelly, Sean and Godley, Amanda and D'Mello, Sidney K.},
-	year = {2020},
-	abstract={Like anyone, teachers need feedback to improve. Due to the high cost of human classroom observation, teachers receive infrequent feedback which is often more focused on evaluating performance than on improving practice. To address this critical barrier to teacher learning, we aim to provide teachers with detailed and actionable automated feedback. Towards this end, we developed an approach that enables teachers to easily record high-quality audio from their classes. Using this approach, teachers recorded 142 classroom sessions, of which 127 (89%) were usable. Next, we used speech recognition and machine learning to develop teacher-generalizable computer-scored estimates of key dimensions of teacher discourse. We found that automated models were moderately accurate when compared to human coders and that speech recognition errors did not influence performance. We conclude that authentic teacher discourse can be recorded and analyzed for automatic feedback. Our next step is to incorporate the automatic models into an interactive visualization tool that will provide teachers with objective feedback on the quality of their discourse.},
-  selected={true},
-  pdf={jensen-chi-20-camera-ready-v4.pdf},
-  poster={jensen-ics-fiesta-poster.pdf},
-}
-
-@inproceedings{Jensen2021Quiz,
-  abbr={LAK},
-	title = {What {You} {Do} {Predicts} {How} {You} {Do}: {Prospectively} {Modeling} {Student} {Quiz} {Performance} {Using} {Activity} {Features} in an {Online} {Learning} {Environment}},
-	isbn = {978-1-4503-8935-8},
-	doi = {10.1145/3448139.3448151},
-	abstract = {Students using online learning environments need to effectively self-regulate their learning. However, with an absence of teacher- provided structure, students often resort to less effective, passive learning strategies versus constructive ones. We consider the po- tential benefits of interventions that promote retrieval practice – retrieving learned content from memory – which is an effective strategy for learning and retention. The goal is to nudge students towards completing short, formative quizzes when they are likely to succeed on those assessments. Towards this goal, we developed a machine-learning model using data from 32,685 students who used an online mathematics platform over an entire school year to prospectively predict scores on three-item assessments (N = 210,020) from interaction patterns up to 9 minutes before the as- sessment as well as Item Response Theory (IRT) estimates of stu- dent ability and quiz difficulty. These models achieved a student- independent correlation of0.55 between predicted and actual scores on the assessments and outperformed IRT-only predictions (r = 0.34). Model performance was largely independent of the length of the analyzed window preceding a quiz. We discuss potential for future applications of the models to trigger dynamic interven- tions that aim to encourage students to engage with formative assessments rather than more passive learning strategies.},
-	booktitle = {{LAK21}: 11th {International} {Learning} {Analytics} and {Knowledge} {Conference} ({LAK21})},
-	publisher = {ACM},
-	author = {Jensen, Emily and Hunkins, Nicholas C. and D'Mello, Sidney K. and Hutt, Stephen and Huggins-Manley, A. Corinne},
-	year = {2021},
-  selected={true},
-  pdf={lak21-12.pdf},
-  slides={https://github.com/emilykjensen/emilykjensen.github.io/blob/master/assets/pptx/Jensen_LAK21-quiz_slides.pptx},
-}
-
-@inproceedings{Jensen2021Teacher,
-  abbr={LAK},
-	title = {A {Deep} {Transfer} {Learning} {Approach} to {Modeling} {Teacher} {Discourse} in the {Classroom}},
-	isbn = {978-1-4503-8935-8},
-	doi = {10.1145/3448139.3448168},
-	abstract = {Teachers, like everyone else, need objective reliable feedback in order to improve their effectiveness. However, developing a system for automated teacher feedback entails many decisions regarding data collection procedures, automated analysis, and presentation of feedback for reflection. We address the latter two questions by comparing two different machine learning approaches to au- tomatically model seven features of teacher discourse (e.g., use of questions, elaborated evaluations). We compared a traditional open- vocabulary approach using n-grams and Random Forest classifiers with a state-of-the-art deep transfer learning approach for natural language processing (BERT). We found a tradeoff between data quantity and accuracy, where deep models had an advantage on larger datasets, but not for smaller datasets, particularly for vari- ables with low incidence rates. We also compared the models based on the level of feedback granularity: utterance-level (e.g., whether an utterance is a question or a statement), class session-level propor- tions by averaging across utterances (e.g., question incidence score of48\%), and session-level ordinal feedback based on pre-determined thresholds (e.g., question asking score is medium [vs. low or high]) and found that BERT generally provided more accurate feedback at all levels of granularity. Thus, BERT appears to be the most viable approach to providing automatic feedback on teacher discourse provided there is sufficient data to fine tune the model.},
-	booktitle = {{LAK21}: 11th {International} {Learning} {Analytics} and {Knowledge} {Conference} ({LAK21})},
-	publisher = {ACM},
-	author = {Jensen, Emily and Pugh, Samuel L. and D'Mello, Sidney K.},
-	year = {2021},
-  	selected={true},
-  	pdf={LAK21-29.pdf},
-	slides={https://github.com/emilykjensen/emilykjensen.github.io/blob/master/assets/pptx/Jensen_LAK21-teacher_slides.pptx},
-}
-
-@incproceedings{dmello_emotional_2022,
-  	abbr={HLA},
-	title = {Emotional {Learning} {Analytics}},
-	abstract = {This chapter discusses the ubiquity and importance of emotion to learning. It argues substantial progress can be made by coupling discovery-oriented, data-driven, analytic methods of learning analytics and educational data mining with theoretical advances and methodologies from the affective and learning sciences. Core, emerging, and future themes of research at the intersection of these areas are discussed.},
-	booktitle = {Handbook of {Learning} {Analytics}},
-	author = {D'Mello, Sidney K. and Jensen, Emily},
-	year = {2022},
-	doi = {10.18608/hla22.012},
-	pages = {120--129},
-  	html={https://www.solaresearch.org/publications/hla-22/hla22-chapter12/},
-}
-
-@inproceedings{leite_novel_2022,
-  	abbr={LAK},
-	address = {New York, NY, USA},
-	title = {A novel video recommendation system for algebra : {An} effectiveness evaluation study},
-	isbn = {978-1-4503-9573-1},
-	doi = {10.1145/3506906},
-	abstract = {This study presents a novel video recommendation system for an algebra virtual learning environment (VLE) that leverages ideas and methods from engagement measurement, item response theory, and reinforcement learning. Following Vygotsky’s Zone of Proximal Development (ZPD) theory, but considering low affect and high affect students separately, we developed a system of five categories of video recommendations: 1) Watch new video; 2) Review current topic video with a new tutor; 3) Review segment of current video with current tutor; 4) Review segment of current video with a new tutor; 5) Watch next video in curriculum sequence. The category of recommendation was determined by student scores on a quiz and a sensor-free engagement detection model. New video recommenda- tions (i.e., category 1) were selected based on a novel reinforcement learning algorithm that takes input from an item response the- ory model. The recommendation system was evaluated in a large field experiment, both before and after school closures due to the COVID-19 pandemic. The results show evidence of effectiveness of the video recommendation algorithm during the period of normal school operations, but the effect disappears after school closures. Implications for teacher orchestration of technology for normal classroom use and periods of school closure are discussed.},
-	booktitle = {{LAK22}: 12th {International} {Learning} {Analytics} and {Knowledge} {Conference} ({LAK22})},
-	publisher = {ACM},
-	author = {Leite, Walter L. and Roy, Samrat and Chakraborty, Nilanjana and Michailidis, George and Huggins-Manley, A. Corinne and D'Mello, Sidney K. and Faradonbeh, Mohammad Kazem Shirani and Jensen, Emily and Kuang, Huan and Jing, Zeyuan},
-	year = {2022},
-	pages = {294--303},
-}
-
-@inproceedings{Jensen2022ITSC,
-	abbr={ITSC},
-	title = {Mathematical {Models} of {Human} {Drivers} {Using} {Artificial} {Risk} {Fields}},
-	html = {http://arxiv.org/abs/2205.12722},
-	doi = {10.48550/arXiv.2205.12722},
-	abstract = {In this paper, we use the concept of artificial risk fields to predict how human operators control a vehicle in response to upcoming road situations. A risk field assigns a non-negative risk measure to the state of the system in order to model how close that state is to violating a safety property, such as hitting an obstacle or exiting the road. Using risk fields, we construct a stochastic model of the operator that maps from states to likely actions. We demonstrate our approach on a driving task wherein human subjects are asked to drive a car inside a realistic driving simulator while avoiding obstacles placed on the road. We show that the most likely risk field given the driving data is obtained by solving a convex optimization problem. Next, we apply the inferred risk fields to generate distinct driving behaviors while comparing predicted trajectories against ground truth measurements. We observe that the risk fields are excellent at predicting future trajectory distributions with high prediction accuracy for up to twenty seconds prediction horizons. At the same time, we observe some challenges such as the inability to account for how drivers choose to accelerate/decelerate based on the road conditions.},
-	booktitle={Intelligent Transportation Systems Conference},
-	author = {Jensen, Emily and Luster, Maya and Yoon, Hansol and Pitts, Brandon and Sankaranarayanan, Sriram},
-	month = october,
-	year = {2022},
-	poster={https://github.com/emilykjensen/emilykjensen.github.io/blob/master/assets/pptx/risk_field_poster.pptx},
-}
-
-@inproceedings{Jensen2022CPHS,
-	abbr={CPHS},
-	title = {Using Artificial Potential Fields To Model Driver Situational Awareness},
-	abstract = {Recently, the use of artificial potential fields, known as risk fields, has been proposed for modeling human driver decision making. Such potential fields map from vehicle states and control inputs to a numerical risk measure such that the probability of choosing a control  decreases as the risk associated increases. In this paper, we show that such a model can be used in a natural manner to also capture aspects of the driver's situational awareness, assuming that the risk fields govern their underlying behavior. We demonstrate our ideas on a specific obstacle avoidance scenario wherein obstacles to be avoided are placed in front of a driver at predicable intervals. Using data collected on a pilot experiment involving six different drivers using a high-fidelity driving simulator, we demonstrate the ability of our approach to capture the likelihood that the driver has perceived/reacted to the obstacle. Our approach works for scenarios when the driver collides with the obstacle as well as scenarios involving successful collision avoidance.},
-	booktitle={4th IFAC Workshop on Cyber-Physical Human-Systems},
-	author = {Jensen, Emily and Luster, Maya and Pitts, Brandon and Sankaranarayanan, Sriram},
-	month = december,
-	year = {2022},
+@article{CHOUDHURY2020101057,
+abbr={JOI},
+title = {Mining Temporal Evolution of Knowledge Graphs and Genealogical Features for Literature-based Discovery Prediction},
+journal = {Journal of Informetrics},
+volume = {14},
+number = {3},
+pages = {101057},
+year = {2020},
+issn = {1751-1577},
+doi = {https://doi.org/10.1016/j.joi.2020.101057},
+url = {https://www.sciencedirect.com/science/article/pii/S1751157719304468},
+author = {Nazim Choudhury and Fahim Faisal and Matloob Khushi},
+keywords = {Literature-based Knowledge Discovery, Dynamic Supervised Link Prediction, Keyword Co-occurrence Network (KCN), Genealogical Community, Weighted Temporal Citation},
+abstract = {Literature-based discovery process identifies the important but implicit relations among information embedded in published literature. Existing techniques from Information Retrieval (IR) and Natural Language Processing (NLP) attempt to identify the hidden or unpublished connections between information concepts within published literature, however, these techniques overlooked the concept of predicting the future and emerging relations among scientific knowledge components such as author selected keywords encapsulated within the literature. Keyword Co-occurrence Network (KCN), built upon author selected keywords, is considered as a knowledge graph that focuses both on these knowledge components and knowledge structure of a scientific domain by examining the relationships between knowledge entities. Using data from two multidisciplinary research domains other than the bio-medical domain, and capitalizing on bibliometrics, the dynamicity of temporal KCNs, and a recurrent neural network, this study develops some novel features supportive for the prediction of the future literature-based discoveries - the emerging connections (co-appearances in the same article) among keywords. Temporal importance extracted from both bipartite and unipartite networks, communities defined by genealogical relations, and the relative importance of temporal citation counts were used in the feature construction process. Both node and edge-level features were input into a recurrent neural network to forecast the feature values and predict the future relations between different scientific concepts/topics represented by the author selected keywords. High performance rates, compared both against contemporary heterogeneous network-based method and preferential attachment process, suggest that these features complement both the prediction of future literature-based discoveries and emerging trend analysis.},
+selected={true},
+bibtex_show={}
 }
