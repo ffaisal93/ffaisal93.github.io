@@ -5,7 +5,7 @@ permalink: /
 
 profile:
   align: right
-  image: 
+  image: fahim.jpeg
   image_cicular: false # crops the image to make it circular
   address:
 
