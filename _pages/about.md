@@ -16,8 +16,9 @@ social: false  # includes social icons at the bottom of the page
 
 Hi there, I'm Fahim!
 
-I'm a Ph.D. student in the [Department of Computer Science](https://cs.gmu.edu/) and [GMU NLP](https://cs.gmu.edu/~antonis/) at George Mason University advised by [Dr. Antonios Anastasopoulos](https://cs.gmu.edu/~antonis/author/antonios-anastasopoulos/). In general, I work on multilingual NLP and fairness in text.
+I am a Ph.D. student in the [Department of Computer Science](https://cs.gmu.edu/) and part of the [GMU NLP group](https://cs.gmu.edu/~antonis/) at George Mason University, where I am advised by [Dr. Antonios Anastasopoulos](https://cs.gmu.edu/~antonis/author/antonios-anastasopoulos/). My research focuses on adapting language models for low-resource languages. More broadly, I am interested in exploring the intersection of language and computational modeling.
 
-<!-- One of my goals in grad school is to maintain a life outside of grad school; depending on the day, you can find me drinking tea, reading dystopian novels, knitting, running or hitting the trails (sometimes at the same time), and messing around on my piano. I also sporadically post an [open diary of sorts](https://emilykjensen.com/blog/) on this site to show that goals, motivation, and progress through grad school (and life) isn't anywhere close to linear.
+<p style="color: red; font-weight: bold;">
+  I am in the job market. Graduating later this year (Fall 2025) looking for postdoc, machine-learning engineer, research scientist positions as well as summer 2025 internships.  <a href="https://fahimfaisal.info/assets/pdf/academic_cv_fahim_faisal.pdf" target="_blank" style="color: blue; ">(my cv)</a>
+</p>
 
-As someone with interests at the intersection of a lot of different fields, I really struggled through the graduate school application process. On top of that, I didn't know what to look for in a program or what the daily life of a graduate student looked like. If you have questions about these as well, I would be [happy to chat](mailto:emily.jensen@colorado.edu) about my experience or connect you with someone else. -->
