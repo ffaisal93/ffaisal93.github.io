@@ -49,6 +49,9 @@ async function generateMealPlan() {
     btn.disabled = true;
     btnText.textContent = 'Generating...';
     btnLoader.style.display = 'block';
+    // Reset and show stop button
+    stopBtn.disabled = false;
+    stopBtn.textContent = '⏹️ Stop';
     stopBtn.style.display = 'inline-block';
     errorMessage.style.display = 'none';
     results.style.display = 'none';
