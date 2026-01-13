@@ -119,6 +119,42 @@ main {
     font-size: 0.85rem;
 }
 
+.button-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+.button-group .btn-primary {
+    flex: 1;
+}
+
+.stop-button {
+    background: #ef4444;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.stop-button:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+}
+
+.stop-button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
 .btn-primary {
     width: 100%;
     padding: 14px 24px;

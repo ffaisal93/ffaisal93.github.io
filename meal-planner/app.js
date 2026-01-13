@@ -1,6 +1,9 @@
 // Configuration
 const DEFAULT_API_URL = 'http://localhost:8000';
 
+// Global abort controller for canceling requests
+let currentAbortController = null;
+
 function getApiUrl() {
     const apiUrlInput = document.getElementById('apiUrl');
     const url = apiUrlInput.value.trim();
@@ -31,23 +34,28 @@ async function generateMealPlan() {
     const btn = document.getElementById('generateBtn');
     const btnText = document.getElementById('btnText');
     const btnLoader = document.getElementById('btnLoader');
+    const stopBtn = document.getElementById('stopBtn');
     const errorMessage = document.getElementById('errorMessage');
     const results = document.getElementById('results');
+    
     if (!query) {
         showError('Please enter a meal plan request');
         return;
     }
 
+    // Create new abort controller
+    currentAbortController = new AbortController();
+
     btn.disabled = true;
     btnText.textContent = 'Generating...';
     btnLoader.style.display = 'block';
+    stopBtn.style.display = 'inline-block';
     errorMessage.style.display = 'none';
     results.style.display = 'none';
 
     try {
         const apiUrl = getApiUrl();
         const generationMode = document.getElementById('generationMode').value;
-
         const userId = getUserId();
 
         const requestBody = { query };
@@ -57,6 +65,7 @@ async function generateMealPlan() {
         const response = await fetch(`${apiUrl}/api/generate-meal-plan`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+            signal: currentAbortController.signal,
             body: JSON.stringify(requestBody),
         });
 
@@ -72,12 +81,27 @@ async function generateMealPlan() {
             await loadUserPreferences(userId);
         }
     } catch (error) {
-        console.error('Error:', error);
-        showError(error.message || 'Failed to generate meal plan. Please check your API URL and try again.');
+        if (error.name === 'AbortError') {
+            showError('Generation stopped by user.');
+        } else {
+            console.error('Error:', error);
+            showError(error.message || 'Failed to generate meal plan. Please check your API URL and try again.');
+        }
     } finally {
         btn.disabled = false;
         btnText.textContent = 'Generate Meal Plan';
         btnLoader.style.display = 'none';
+        stopBtn.style.display = 'none';
+        currentAbortController = null;
+    }
+}
+
+function stopGeneration() {
+    if (currentAbortController) {
+        currentAbortController.abort();
+        const stopBtn = document.getElementById('stopBtn');
+        stopBtn.disabled = true;
+        stopBtn.textContent = '⏹️ Stopping...';
     }
 }
 

@@ -51,10 +51,15 @@
                     ></textarea>
                 </div>
 
-                <button id="generateBtn" class="btn-primary" onclick="generateMealPlan()">
-                    <span id="btnText">Generate Meal Plan</span>
-                    <span id="btnLoader" class="loader" style="display: none;"></span>
-                </button>
+                <div class="button-group">
+                    <button id="generateBtn" class="btn-primary" onclick="generateMealPlan()">
+                        <span id="btnText">Generate Meal Plan</span>
+                        <span id="btnLoader" class="loader" style="display: none;"></span>
+                    </button>
+                    <button id="stopBtn" class="stop-button" onclick="stopGeneration()" style="display: none;">
+                        ⏹️ Stop
+                    </button>
+                </div>
 
                 <div class="example-queries">
                     <p class="examples-label">Try these examples:</p>
