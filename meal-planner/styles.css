@@ -5,23 +5,24 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary-color: #10b981;
-    --background: #f9fafb;
+    /* Softer, more eye-friendly palette */
+    --primary-color: #3b82f6;      /* soft blue */
+    --primary-dark: #2563eb;
+    --secondary-color: #22c55e;    /* gentle green */
+    --background: #f3f4f6;         /* warm grey background */
     --surface: #ffffff;
-    --text-primary: #111827;
+    --text-primary: #0f172a;       /* slightly softer than pure black */
     --text-secondary: #6b7280;
     --border: #e5e7eb;
     --error: #ef4444;
-    --success: #10b981;
-    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --success: #16a34a;
+    --shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.08), 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+    --shadow-lg: 0 18px 45px -15px rgba(15, 23, 42, 0.25);
 }
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: radial-gradient(circle at top left, #e0f2fe 0%, #f9fafb 45%, #e5e7eb 100%);
     min-height: 100vh;
     padding: 20px;
     color: var(--text-primary);
@@ -34,7 +35,7 @@ body {
 
 header {
     text-align: center;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 40px;
     padding: 40px 20px;
 }
@@ -397,6 +398,34 @@ main {
     box-shadow: var(--shadow);
 }
 
+.link-button {
+    background: transparent;
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    color: var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.link-button:hover {
+    background: rgba(99, 102, 241, 0.08);
+    border-color: var(--primary-dark);
+    color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+}
+
+.link-button:focus-visible {
+    outline: 2px solid rgba(99, 102, 241, 0.7);
+    outline-offset: 2px;
+}
+
 .empty-state {
     color: var(--text-secondary);
     font-size: 0.9rem;
@@ -590,7 +619,7 @@ main {
 
 footer {
     text-align: center;
-    color: white;
+    color: var(--text-secondary);
     padding: 30px 20px;
     opacity: 0.9;
 }
@@ -600,7 +629,7 @@ footer {
 }
 
 .footer-links a {
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     opacity: 0.8;
     transition: opacity 0.2s;
