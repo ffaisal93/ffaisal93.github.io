@@ -6,10 +6,10 @@
 
 :root {
     /* Softer, more eye-friendly palette */
-    --primary-color: #668ef4;      /* soft blue */
+    --primary-color: #3b82f6;      /* soft blue */
     --primary-dark: #2563eb;
     --secondary-color: #22c55e;    /* gentle green */
-    --background: #99de94;         /* warm grey background */
+    --background: #f3f4f6;         /* warm grey background */
     --surface: #ffffff;
     --text-primary: #0f172a;       /* slightly softer than pure black */
     --text-secondary: #6b7280;
