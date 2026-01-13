@@ -58,6 +58,19 @@
                         </button>
                     </div>
                 </div>
+
+                <div class="smart-suggestions" id="smartSuggestions" style="display: none;">
+                    <p class="suggestions-label">💡 Based on your history:</p>
+                    <div class="suggestion-chips" id="suggestionChips"></div>
+                </div>
+            </div>
+
+            <div class="history-section" id="historySection" style="display: none;">
+                <div class="history-header">
+                    <h2>📋 My Meal Plans</h2>
+                    <button class="btn-secondary" onclick="toggleHistory()" id="toggleHistoryBtn">Hide History</button>
+                </div>
+                <div id="historyContent" class="history-content"></div>
             </div>
 
             <div id="errorMessage" class="error-message" style="display: none;"></div>
@@ -93,6 +106,7 @@
         <footer>
             <p>Powered by OpenAI GPT & FastAPI</p>
             <p class="footer-links">
+                <a href="#" onclick="toggleHistory(); return false;" id="viewHistoryLink">View My Meal Plans</a> |
                 <a href="#" onclick="openApiDocs(); return false;">API Documentation</a> |
                 <a href="https://github.com/ffaisal93/ml_meal_prep" target="_blank">GitHub</a> |
                 <a href="https://fahimfaisal.info">Back to Home</a>
