@@ -285,29 +285,50 @@ async function loadUserPreferences() {
     try {
         const apiUrl = getApiUrl();
         const userId = getUserId();
+        console.log('Loading preferences for user:', userId);
+        
         const response = await fetch(`${apiUrl}/api/user/${userId}/preferences?limit=10`);
+        console.log('API Response status:', response.status);
         
         if (response.ok) {
             const data = await response.json();
+            console.log('Preferences data:', data);
+            
             if (data.count > 0) {
+                console.log('Found', data.count, 'preferences, showing suggestions');
                 // Show smart suggestions
                 showSmartSuggestions(data.preferences);
                 // Pre-fill form with last preferences
                 prefillForm(data.preferences[0]);
+            } else {
+                console.log('No preferences found (count is 0)');
             }
+        } else {
+            const errorText = await response.text();
+            console.error('API Error:', response.status, errorText);
         }
     } catch (error) {
-        console.log('Could not load preferences:', error);
+        console.error('Could not load preferences:', error);
         // Silently fail - not critical
     }
 }
 
 // Show smart suggestions based on history
 function showSmartSuggestions(preferences) {
-    if (preferences.length === 0) return;
+    console.log('showSmartSuggestions called with:', preferences);
+    if (preferences.length === 0) {
+        console.log('No preferences to show');
+        return;
+    }
     
     const suggestionsDiv = document.getElementById('smartSuggestions');
     const chipsDiv = document.getElementById('suggestionChips');
+    
+    if (!suggestionsDiv || !chipsDiv) {
+        console.error('Could not find smartSuggestions or suggestionChips elements');
+        return;
+    }
+    
     chipsDiv.innerHTML = '';
     
     // Get most common preferences
