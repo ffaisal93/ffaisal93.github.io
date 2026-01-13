@@ -331,22 +331,68 @@ function showSmartSuggestions(preferences) {
     
     chipsDiv.innerHTML = '';
     
-    // Get most common preferences
+    // Get last query for regenerate (always use most recent)
     const lastPref = preferences[0];
     const suggestions = [];
     
-    // Build suggestion based on last preference
-    if (lastPref.dietary_restrictions && lastPref.dietary_restrictions.length > 0) {
+    // Analyze last 2-3 queries for common patterns
+    const recentPrefs = preferences.slice(0, Math.min(3, preferences.length));
+    
+    // Collect all dietary restrictions from recent queries
+    const allRestrictions = [];
+    recentPrefs.forEach(pref => {
+        if (pref.dietary_restrictions && pref.dietary_restrictions.length > 0) {
+            allRestrictions.push(...pref.dietary_restrictions);
+        }
+    });
+    
+    // Find most common restrictions (appear in 2+ queries)
+    const restrictionCounts = {};
+    allRestrictions.forEach(restriction => {
+        restrictionCounts[restriction] = (restrictionCounts[restriction] || 0) + 1;
+    });
+    
+    const commonRestrictions = Object.keys(restrictionCounts)
+        .filter(r => restrictionCounts[r] >= 2)
+        .sort((a, b) => restrictionCounts[b] - restrictionCounts[a]);
+    
+    // If no common restrictions, use the most recent one
+    if (commonRestrictions.length > 0) {
+        const restrictions = commonRestrictions.slice(0, 2).join(', '); // Max 2 for readability
+        suggestions.push(`Create a meal plan (${restrictions})`);
+    } else if (lastPref.dietary_restrictions && lastPref.dietary_restrictions.length > 0) {
         const restrictions = lastPref.dietary_restrictions.join(', ');
         suggestions.push(`Create a meal plan (${restrictions})`);
     }
     
-    if (lastPref.preferences && lastPref.preferences.length > 0) {
+    // Collect all preferences from recent queries
+    const allPreferences = [];
+    recentPrefs.forEach(pref => {
+        if (pref.preferences && pref.preferences.length > 0) {
+            allPreferences.push(...pref.preferences);
+        }
+    });
+    
+    // Find most common preferences (appear in 2+ queries)
+    const preferenceCounts = {};
+    allPreferences.forEach(pref => {
+        preferenceCounts[pref] = (preferenceCounts[pref] || 0) + 1;
+    });
+    
+    const commonPreferences = Object.keys(preferenceCounts)
+        .filter(p => preferenceCounts[p] >= 2)
+        .sort((a, b) => preferenceCounts[b] - preferenceCounts[a]);
+    
+    // If no common preferences, use the most recent one
+    if (commonPreferences.length > 0) {
+        const prefs = commonPreferences.slice(0, 2).join(', '); // Max 2 for readability
+        suggestions.push(`Generate ${prefs} meal plan`);
+    } else if (lastPref.preferences && lastPref.preferences.length > 0) {
         const prefs = lastPref.preferences.join(', ');
         suggestions.push(`Generate ${prefs} meal plan`);
     }
     
-    // Add "Regenerate last" option
+    // Add "Regenerate last" option (always based on most recent)
     if (lastPref.query) {
         suggestions.push(`Regenerate: ${lastPref.query.substring(0, 50)}...`);
     }
