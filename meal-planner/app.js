@@ -1,6 +1,17 @@
 // Configuration
 const DEFAULT_API_URL = 'https://ml-meal-prep-api-production.up.railway.app';
 
+// Get or create user ID (stored in localStorage for persistence)
+function getUserId() {
+    let userId = localStorage.getItem('mealPlannerUserId');
+    if (!userId) {
+        // Generate a unique user ID
+        userId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        localStorage.setItem('mealPlannerUserId', userId);
+    }
+    return userId;
+}
+
 // Get API URL from input or use default
 function getApiUrl() {
     const apiUrlInput = document.getElementById('apiUrl');
@@ -39,12 +50,16 @@ async function generateMealPlan() {
 
     try {
         const apiUrl = getApiUrl();
+        const userId = getUserId(); // Get user ID for preference tracking
         const response = await fetch(`${apiUrl}/api/generate-meal-plan`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ query }),
+            body: JSON.stringify({ 
+                query: query,
+                user_id: userId  // Include user_id to save preferences
+            }),
         });
 
         if (!response.ok) {
