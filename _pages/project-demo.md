@@ -8,6 +8,7 @@ nav_order: 6
 dropdown: true
 children:
   - title: Meal Planner
-    url: /meal-planner/
+    url: https://ffaisal93.github.io/ml_meal_prep/
+    new_window: true
 ---
 
