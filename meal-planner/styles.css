@@ -22,8 +22,8 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    /* Soft deep-blue background */
-    background: radial-gradient(circle at top left, #1d4ed8 0%, #1e293b 45%, #020617 100%);
+    /* Light, soft blue background */
+    background: radial-gradient(circle at top left, #e0f2fe 0%, #eff6ff 40%, #dbeafe 100%);
     min-height: 100vh;
     padding: 20px;
     color: var(--text-primary);
