@@ -8,6 +8,6 @@ nav_order: 6
 dropdown: true
 children:
   - title: Meal Planner
-    url: http://fahimfaisal.info/ml_meal_prep/
+    url: /meal-planner/
 ---
 
