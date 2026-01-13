@@ -56,15 +56,6 @@
                     <span id="btnLoader" class="loader" style="display: none;"></span>
                 </button>
 
-                <div class="eval-controls">
-                    <button id="evalBtn" class="link-button" onclick="runDiversityEvaluation()">
-                        🔎 Run Diversity Evaluation
-                    </button>
-                    <small class="eval-help">
-                        Compares recipe name diversity across LLM-Only, RAG, and Hybrid strategies for 1/3/5/7-day plans.
-                    </small>
-                </div>
-
                 <div class="example-queries">
                     <p class="examples-label">Try these examples:</p>
                     <div class="example-chips">
@@ -141,36 +132,6 @@
                 <div id="mealPlanDays" class="meal-plan-days"></div>
             </div>
 
-            <div id="evalSection" class="eval-section" style="display: none;">
-                <div class="section-title">
-                    <h3>🔎 Strategy Diversity Evaluation</h3>
-                    <p class="section-caption">Measures how diverse the recipe names are across strategies and durations.</p>
-                </div>
-                <p id="evalStatus" class="eval-status">
-                    Click "Run Diversity Evaluation" to compare strategies. This will make several API calls and may take up to a minute.
-                </p>
-                <div class="eval-table-wrapper">
-                    <table class="eval-table">
-                        <thead>
-                            <tr>
-                                <th>Strategy</th>
-                                <th>Days</th>
-                                <th>Runs</th>
-                                <th>Total Meals</th>
-                                <th>Unique Meals</th>
-                                <th>Diversity Score</th>
-                            </tr>
-                        </thead>
-                        <tbody id="evalTableBody">
-                            <tr>
-                                <td colspan="6" class="empty-state">
-                                    No evaluation results yet. Click "Run Diversity Evaluation" to start.
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
         </main>
 
         <footer>
