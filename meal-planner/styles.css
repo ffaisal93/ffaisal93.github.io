@@ -167,6 +167,19 @@ main {
     border-top: 1px solid var(--border);
 }
 
+.eval-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.eval-help {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
 .examples-label {
     font-size: 0.9rem;
     color: var(--text-secondary);
@@ -210,6 +223,65 @@ main {
 .results-section {
     margin-top: 40px;
     animation: fadeIn 0.5s;
+}
+
+.eval-section {
+    margin-top: 32px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: rgba(248, 250, 252, 0.9);
+    box-shadow: var(--shadow);
+}
+
+.eval-status {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.eval-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.eval-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.eval-table th,
+.eval-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+.eval-table th {
+    background: #eff6ff;
+    font-weight: 600;
+    color: #1d4ed8;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.eval-table tr:nth-child(even) td {
+    background: #f9fafb;
+}
+
+.eval-table tr:hover td {
+    background: #eef2ff;
+}
+
+.eval-table td:last-child {
+    font-weight: 600;
 }
 
 @keyframes fadeIn {

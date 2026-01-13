@@ -1,6 +1,11 @@
 // Configuration
 const DEFAULT_API_URL = 'http://localhost:8000';
 
+// Evaluation settings
+const EVAL_MODES = ['llm_only', 'rag', 'hybrid'];
+const EVAL_DURATIONS = [1, 3, 5, 7];
+const EVAL_RUNS_PER_CONFIG = 3;
+
 function getApiUrl() {
     const apiUrlInput = document.getElementById('apiUrl');
     const url = apiUrlInput.value.trim();
@@ -357,6 +362,151 @@ function showError(message) {
 function openApiDocs() {
     const apiUrl = getApiUrl();
     window.open(`${apiUrl}/docs`, '_blank');
+}
+
+// Diversity evaluation
+async function runDiversityEvaluation() {
+    const apiUrl = getApiUrl();
+    const userId = getUserId();
+    const evalSection = document.getElementById('evalSection');
+    const evalStatus = document.getElementById('evalStatus');
+    const evalTableBody = document.getElementById('evalTableBody');
+    const evalBtn = document.getElementById('evalBtn');
+
+    if (!apiUrl) {
+        showError('Please enter a valid API URL before running evaluation.');
+        return;
+    }
+
+    evalSection.style.display = 'block';
+    evalTableBody.innerHTML = `
+        <tr>
+            <td colspan="6" class="empty-state">Running evaluation...</td>
+        </tr>
+    `;
+    evalStatus.textContent = 'Running evaluation... this may take up to a minute depending on API speed.';
+    if (evalBtn) evalBtn.disabled = true;
+
+    const results = [];
+
+    try {
+        let totalConfigs = EVAL_MODES.length * EVAL_DURATIONS.length;
+        let configIndex = 0;
+
+        for (const mode of EVAL_MODES) {
+            for (const days of EVAL_DURATIONS) {
+                configIndex += 1;
+                evalStatus.textContent = `Running ${EVAL_RUNS_PER_CONFIG} runs for ${mode.toUpperCase()} (${days} day${days > 1 ? 's' : ''}) ` +
+                    `(${configIndex}/${totalConfigs})...`;
+
+                const mealNames = [];
+
+                for (let run = 0; run < EVAL_RUNS_PER_CONFIG; run++) {
+                    const query = `Create a ${days}-day healthy, diverse meal plan`;
+                    const requestBody = {
+                        query,
+                        generation_mode: mode,
+                        user_id: userId
+                    };
+
+                    const response = await fetch(`${apiUrl}/api/generate-meal-plan`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(requestBody),
+                    });
+
+                    if (!response.ok) {
+                        let errorDetail = '';
+                        try {
+                            const errorJson = await response.json();
+                            errorDetail = errorJson.detail || errorJson.error || '';
+                        } catch (e) {
+                            // ignore JSON parse errors
+                        }
+                        throw new Error(errorDetail || `Evaluation request failed with status ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    if (data && Array.isArray(data.meal_plan)) {
+                        data.meal_plan.forEach(dayObj => {
+                            if (!dayObj || !Array.isArray(dayObj.meals)) return;
+                            dayObj.meals.forEach(meal => {
+                                if (meal && meal.recipe_name) {
+                                    const name = String(meal.recipe_name).toLowerCase().trim();
+                                    if (name) mealNames.push(name);
+                                }
+                            });
+                        });
+                    }
+                }
+
+                const totalMeals = mealNames.length;
+                const uniqueMeals = new Set(mealNames).size;
+                const diversityScore = totalMeals > 0
+                    ? Math.round((uniqueMeals / totalMeals) * 100)
+                    : 0;
+
+                results.push({
+                    mode,
+                    days,
+                    runs: EVAL_RUNS_PER_CONFIG,
+                    totalMeals,
+                    uniqueMeals,
+                    diversityScore
+                });
+            }
+        }
+
+        renderEvalResults(results);
+        evalStatus.textContent = 'Evaluation complete.';
+    } catch (error) {
+        console.error('Diversity evaluation error:', error);
+        evalStatus.textContent = `Evaluation failed: ${error.message || 'Unknown error'}`;
+    } finally {
+        if (evalBtn) evalBtn.disabled = false;
+    }
+}
+
+function renderEvalResults(results) {
+    const evalTableBody = document.getElementById('evalTableBody');
+    if (!evalTableBody) return;
+
+    const modeLabels = {
+        'llm_only': '🤖 LLM-Only',
+        'rag': '🔍 RAG',
+        'hybrid': '⚡ Hybrid'
+    };
+
+    evalTableBody.innerHTML = '';
+
+    if (!results || results.length === 0) {
+        evalTableBody.innerHTML = `
+            <tr>
+                <td colspan="6" class="empty-state">No evaluation results.</td>
+            </tr>
+        `;
+        return;
+    }
+
+    // Sort by mode then days
+    results
+        .slice()
+        .sort((a, b) => {
+            if (a.mode === b.mode) return a.days - b.days;
+            return a.mode.localeCompare(b.mode);
+        })
+        .forEach(result => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${modeLabels[result.mode] || result.mode}</td>
+                <td>${result.days}</td>
+                <td>${result.runs}</td>
+                <td>${result.totalMeals}</td>
+                <td>${result.uniqueMeals}</td>
+                <td>${result.diversityScore}%</td>
+            `;
+            evalTableBody.appendChild(tr);
+        });
 }
 
 // Allow Enter key to submit (but not Shift+Enter)
