@@ -16,9 +16,8 @@ social: false  # includes social icons at the bottom of the page
 
 Hi there, I'm Fahim!
 
-I am a Ph.D. student in the [Department of Computer Science](https://cs.gmu.edu/) and part of the [GMU NLP group](https://cs.gmu.edu/~antonis/) at George Mason University, where I am advised by [Dr. Antonios Anastasopoulos](https://cs.gmu.edu/~antonis/author/antonios-anastasopoulos/). My research focuses on adapting language models for low-resource languages. More broadly, I am interested in exploring the intersection of language and computational modeling.
+I am a Ph.D. candidate in the [Department of Computer Science](https://cs.gmu.edu/) at George Mason University, working with the [GMU NLP group](https://cs.gmu.edu/~antonis/) under the supervision of [Dr. Antonios Anastasopoulos](https://cs.gmu.edu/~antonis/author/antonios-anastasopoulos/). My research centers on making language models work for the world's underrepresented languages — particularly in low-resource settings where data is scarce and the stakes are high. More broadly, I am interested in the intersection of language, culture, and computation. I have a growing enthusiasm for AI-driven scientific discovery as well and the evaluation of LLMs as their capabilities expand into ever-new frontiers.
 
-<p style="color: red; font-weight: bold;">
-  I am in the job market and primarily looking for faculty positions in NLP/LLM, as well as research scientist positions. I am graduating later this year (Spring-Fall 2026). <a href="https://fahimfaisal.info/assets/pdf/academic_cv_fahim_faisal.pdf" target="_blank" style="color: blue; ">(my cv)</a>
+<p style="font-weight: bold;">
+  I am currently on the job market, seeking faculty positions in NLP/LLM as well as research scientist roles. I am expecting to graduate in Spring–Fall 2026. <a href="https://fahimfaisal.info/assets/pdf/academic_cv_fahim_faisal.pdf" target="_blank">(CV)</a>
 </p>
-
