@@ -2,7 +2,7 @@
 layout: page
 title: Learning with AI
 permalink: /learning-with-ai/
-description: Open, searchable study guides and interactive books I build and maintain on modern AI — from ML foundations to evaluating agents and serving LLMs in production.
+description: Open, searchable study guides and interactive books I build and maintain on modern AI — from ML foundations to building, evaluating, and serving agents and LLMs in production.
 nav: true
 nav_order: 5.5
 ---
@@ -36,8 +36,18 @@ searchable book you can read online. Pick a track below.
     <div class="card h-100">
       <div class="card-body">
         <h5 class="card-title">Agentic AI Evaluation</h5>
-        <p class="card-text">Frameworks, metrics, benchmarks, tool-use and safety evaluation, and production monitoring for evaluating agentic AI systems.</p>
+        <p class="card-text">Frameworks, metrics, benchmarks, tool-use and safety evaluation, and production monitoring for agentic AI systems &mdash; plus a 21-pattern design-patterns interview playbook and a long-horizon operations track.</p>
         <a href="https://fahimfaisal.info/agentic-ai-evaluation-guide/" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Open guide &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Production Agent Engineering</h5>
+        <p class="card-text">A build-first guide to shipping agents: tool design and MCP, context engineering and memory, orchestration, evaluation and tracing, CI/CD, security, and deployment &mdash; with nine mini-projects and three end-to-end production systems.</p>
+        <a href="https://fahimfaisal.info/learn-production-agent/" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Open guide &rarr;</a>
       </div>
     </div>
   </div>
