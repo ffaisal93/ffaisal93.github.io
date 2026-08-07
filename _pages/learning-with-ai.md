@@ -112,6 +112,7 @@ Guides and books by other people that I keep coming back to. All free to read on
 ### Courses
 
 - [RLHF &amp; Post-Training Course](https://rlhfbook.com/course) &mdash; Nathan Lambert's course on RLHF and post-training, companion to his RLHF book. Slides and notes here, [lecture videos on YouTube](https://www.youtube.com/watch?v=jQPiH-KB4B0&list=PLL1tdVxB1CpVpEtMHxwuR4uI4Lxjw00_y).
+- [Cohere Labs ML Summer School](https://www.youtube.com/playlist?list=PLLalUvky4CLK3oT1DKNPagd_lTXooYVlR) &mdash; recorded lecture series from Cohere Labs' Open Science Community, spanning ML maths through distributed training. [Programme page](https://labscommunity.cohere.com/community-programs/archive/summer-school).
 - [Hugging Face LLM Course](https://huggingface.co/learn/llm-course) &mdash; practical, hands-on, and kept current with the ecosystem.
 - [Hugging Face Agents Course](https://huggingface.co/learn/agents-course) &mdash; agent fundamentals through deployment, with hands-on units.
 - [Full Stack Deep Learning](https://fullstackdeeplearning.com/course/2022/) &mdash; everything around the model: data, testing, deployment, monitoring, teams.
