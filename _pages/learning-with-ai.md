@@ -111,8 +111,7 @@ Guides and books by other people that I keep coming back to. All free to read on
 
 ### Courses
 
-- [RLHF &amp; Post-Training Course](https://rlhfbook.com/course) &mdash; Nathan Lambert's lecture course on RLHF and post-training, companion to his RLHF book.
-- [Video lecture series](https://www.youtube.com/watch?v=jQPiH-KB4B0&list=PLL1tdVxB1CpVpEtMHxwuR4uI4Lxjw00_y) &mdash; YouTube playlist.
+- [RLHF &amp; Post-Training Course](https://rlhfbook.com/course) &mdash; Nathan Lambert's course on RLHF and post-training, companion to his RLHF book. Slides and notes here, [lecture videos on YouTube](https://www.youtube.com/watch?v=jQPiH-KB4B0&list=PLL1tdVxB1CpVpEtMHxwuR4uI4Lxjw00_y).
 - [Hugging Face LLM Course](https://huggingface.co/learn/llm-course) &mdash; practical, hands-on, and kept current with the ecosystem.
 - [Hugging Face Agents Course](https://huggingface.co/learn/agents-course) &mdash; agent fundamentals through deployment, with hands-on units.
 - [Full Stack Deep Learning](https://fullstackdeeplearning.com/course/2022/) &mdash; everything around the model: data, testing, deployment, monitoring, teams.
