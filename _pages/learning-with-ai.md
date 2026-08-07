@@ -43,12 +43,28 @@ searchable book you can read online. Pick a track below.
     font-size: 0.72rem;
     padding: 0.3rem 0.7rem;
   }
-  .plain-links {
-    font-size: 0.82rem;
-    opacity: 0.85;
-    margin-top: 1.6rem;
+  .resource-list a {
+    color: #4f46e5;
+    text-decoration: none;
   }
-  .plain-links a { margin-right: 1.1rem; }
+  .resource-list a:hover {
+    color: #3730a3;
+    text-decoration: underline;
+  }
+  html[data-theme="dark"] .resource-list a { color: #a5b4fc; }
+  html[data-theme="dark"] .resource-list a:hover { color: #c7d2fe; }
+
+  .plain-links {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .plain-links a {
+    margin-right: 1.2rem;
+    color: #4f46e5;
+    text-decoration: none;
+  }
+  .plain-links a:hover { text-decoration: underline; }
+  html[data-theme="dark"] .plain-links a { color: #a5b4fc; }
 </style>
 
 <div class="guide-grid">
@@ -91,6 +107,8 @@ searchable book you can read online. Pick a track below.
 
 Guides and books by other people that I keep coming back to. All free to read online.
 
+<div class="resource-list" markdown="1">
+
 ### Foundations
 
 - [Dive into Deep Learning](https://d2l.ai/) &mdash; an interactive book where every concept comes with runnable code in PyTorch, TensorFlow, and JAX.
@@ -119,6 +137,10 @@ Guides and books by other people that I keep coming back to. All free to read on
 
 - [Made With ML](https://madewithml.com/) &mdash; design, develop, deploy, and iterate on production ML systems, with code.
 - [Full Stack Deep Learning](https://fullstackdeeplearning.com/course/2022/) &mdash; everything around the model: data, testing, deployment, monitoring, teams.
+
+</div>
+
+---
 
 <p class="plain-links">
   <a href="https://crackmlinterview.com/" target="_blank" rel="noopener">crackmlinterview.com</a>
