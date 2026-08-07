@@ -39,9 +39,9 @@ searchable book you can read online. Pick a track below.
     flex-grow: 1;
   }
   .guide-card .guide-link {
-    font-size: 0.78rem;
-    font-weight: 500;
-    text-decoration: none;
+    align-self: flex-start;
+    font-size: 0.72rem;
+    padding: 0.3rem 0.7rem;
   }
   .plain-links {
     font-size: 0.82rem;
@@ -56,31 +56,31 @@ searchable book you can read online. Pick a track below.
   <div class="guide-card">
     <div class="guide-title">Machine Learning &amp; LLMs</div>
     <div class="guide-desc">Classical ML, transformers, attention, LLM inference, alignment/RLHF, and scaling laws.</div>
-    <a class="guide-link" href="https://fahimfaisal.info/ml_and_llm_learning/" target="_blank" rel="noopener">Open guide &rarr;</a>
+    <a class="btn btn-sm btn-primary guide-link" href="https://fahimfaisal.info/ml_and_llm_learning/" target="_blank" rel="noopener">Open guide &rarr;</a>
   </div>
 
   <div class="guide-card">
     <div class="guide-title">Production Agent Engineering</div>
     <div class="guide-desc">Build-first: tool design and MCP, context engineering, memory, orchestration, CI/CD, security, deployment.</div>
-    <a class="guide-link" href="https://fahimfaisal.info/learn-production-agent/" target="_blank" rel="noopener">Open guide &rarr;</a>
+    <a class="btn btn-sm btn-primary guide-link" href="https://fahimfaisal.info/learn-production-agent/" target="_blank" rel="noopener">Open guide &rarr;</a>
   </div>
 
   <div class="guide-card">
     <div class="guide-title">Agentic AI Evaluation</div>
     <div class="guide-desc">Metrics, benchmarks, tool-use and safety evaluation, monitoring, plus a design-patterns playbook.</div>
-    <a class="guide-link" href="https://fahimfaisal.info/agentic-ai-evaluation-guide/" target="_blank" rel="noopener">Open guide &rarr;</a>
+    <a class="btn btn-sm btn-primary guide-link" href="https://fahimfaisal.info/agentic-ai-evaluation-guide/" target="_blank" rel="noopener">Open guide &rarr;</a>
   </div>
 
   <div class="guide-card">
     <div class="guide-title">LLM Inference &amp; Serving</div>
     <div class="guide-desc">vLLM, Triton, Kubernetes, autoscaling, canary deploys, monitoring, and drift detection.</div>
-    <a class="guide-link" href="https://fahimfaisal.info/llm-serving-inference-guide/" target="_blank" rel="noopener">Open guide &rarr;</a>
+    <a class="btn btn-sm btn-primary guide-link" href="https://fahimfaisal.info/llm-serving-inference-guide/" target="_blank" rel="noopener">Open guide &rarr;</a>
   </div>
 
   <div class="guide-card">
     <div class="guide-title">Toxicogenomics &amp; Single-Cell FMs</div>
     <div class="guide-desc">ML for toxicogenomics and single-cell foundation models: biological response and cell-state representations.</div>
-    <a class="guide-link" href="https://fahimfaisal.info/toxicogenomics_and_single_cell_fm_learning/" target="_blank" rel="noopener">Open guide &rarr;</a>
+    <a class="btn btn-sm btn-primary guide-link" href="https://fahimfaisal.info/toxicogenomics_and_single_cell_fm_learning/" target="_blank" rel="noopener">Open guide &rarr;</a>
   </div>
 
 </div>
