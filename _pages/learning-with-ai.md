@@ -109,6 +109,14 @@ Guides and books by other people that I keep coming back to. All free to read on
 
 <div class="resource-list" markdown="1">
 
+### Courses
+
+- [RLHF &amp; Post-Training Course](https://rlhfbook.com/course) &mdash; Nathan Lambert's lecture course on RLHF and post-training, companion to his RLHF book.
+- [Video lecture series](https://www.youtube.com/watch?v=jQPiH-KB4B0&list=PLL1tdVxB1CpVpEtMHxwuR4uI4Lxjw00_y) &mdash; YouTube playlist.
+- [Hugging Face LLM Course](https://huggingface.co/learn/llm-course) &mdash; practical, hands-on, and kept current with the ecosystem.
+- [Hugging Face Agents Course](https://huggingface.co/learn/agents-course) &mdash; agent fundamentals through deployment, with hands-on units.
+- [Full Stack Deep Learning](https://fullstackdeeplearning.com/course/2022/) &mdash; everything around the model: data, testing, deployment, monitoring, teams.
+
 ### Foundations
 
 - [Dive into Deep Learning](https://d2l.ai/) &mdash; an interactive book where every concept comes with runnable code in PyTorch, TensorFlow, and JAX.
@@ -119,13 +127,11 @@ Guides and books by other people that I keep coming back to. All free to read on
 ### LLM internals
 
 - [Neural Networks: Zero to Hero](https://karpathy.ai/zero-to-hero.html) &mdash; Karpathy builds backprop, then a transformer, then a tokenizer, from nothing.
-- [Hugging Face LLM Course](https://huggingface.co/learn/llm-course) &mdash; practical, hands-on, and kept current with the ecosystem.
 - [The Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook) &mdash; how training actually works across thousands of GPUs.
 
 ### Agents
 
 - [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) &mdash; when to use an agent and when a workflow is the better call.
-- [Hugging Face Agents Course](https://huggingface.co/learn/agents-course) &mdash; agent fundamentals through deployment, with hands-on units.
 - [Model Context Protocol](https://modelcontextprotocol.io/) &mdash; the spec and docs for the emerging standard for connecting agents to tools.
 
 ### Systems and serving
@@ -136,7 +142,6 @@ Guides and books by other people that I keep coming back to. All free to read on
 ### Practice
 
 - [Made With ML](https://madewithml.com/) &mdash; design, develop, deploy, and iterate on production ML systems, with code.
-- [Full Stack Deep Learning](https://fullstackdeeplearning.com/course/2022/) &mdash; everything around the model: data, testing, deployment, monitoring, teams.
 
 </div>
 
