@@ -128,6 +128,7 @@ Guides and books by other people that I keep coming back to. All free to read on
 
 - [Neural Networks: Zero to Hero](https://karpathy.ai/zero-to-hero.html) &mdash; Karpathy builds backprop, then a transformer, then a tokenizer, from nothing.
 - [The Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook) &mdash; how training actually works across thousands of GPUs.
+- [Reinforcement Learning for LLMs](https://cameronrwolfe.substack.com/p/llm-rl) &mdash; Cameron Wolfe's walk from policy gradients through REINFORCE, PPO, and GRPO, with the KL penalty and advantage estimation explained rather than assumed.
 
 ### Agents
 
