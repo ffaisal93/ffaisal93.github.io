@@ -2,14 +2,90 @@
 layout: default
 ---
 <!-- _layouts/cv.html -->
-        <div class="post">
+<div class="post">
 
-          <header class="post-header">
-            <h1 class="post-title">{{ page.title }} {% if page.cv_pdf %}<a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>{% endif %}</h1>
-            <p class="post-description">{{ page.description }}</p>
-          </header>
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
 
-          <article>
-            {{ content }}
-          </article>
-        </div>
+  {% if page.cv_pdf %}
+  {% assign cv_url = page.cv_pdf | prepend: 'assets/pdf/' | relative_url %}
+
+  <div class="cv-actions">
+    <a href="{{ cv_url }}" class="cv-btn" download><i class="fas fa-download"></i> Download PDF</a>
+    <a href="{{ cv_url }}" class="cv-btn cv-btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Open in new tab</a>
+  </div>
+
+  <div class="cv-embed">
+    <object data="{{ cv_url }}" type="application/pdf">
+      <iframe src="{{ cv_url }}" title="{{ page.title }}" loading="lazy">
+        <p>Your browser cannot display the PDF inline. <a href="{{ cv_url }}">Download it instead</a>.</p>
+      </iframe>
+    </object>
+  </div>
+
+  <p class="cv-fallback">
+    If the document does not appear above, your browser is blocking inline PDFs.
+    <a href="{{ cv_url }}">Download the PDF directly</a>.
+  </p>
+  {% endif %}
+
+  <article>
+    {{ content }}
+  </article>
+</div>
+
+<style>
+  .cv-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.2rem 0;
+  }
+  .cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--global-theme-color);
+    background-color: var(--global-theme-color);
+    color: var(--global-bg-color) !important;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: opacity 0.15s ease-in-out;
+  }
+  .cv-btn:hover { opacity: 0.82; text-decoration: none; }
+  .cv-btn-secondary {
+    background-color: transparent;
+    color: var(--global-theme-color) !important;
+  }
+  .cv-embed {
+    width: 100%;
+    height: 85vh;
+    min-height: 500px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--global-card-bg-color);
+  }
+  .cv-embed object,
+  .cv-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .cv-fallback {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+  /* Inline PDF viewers are unreliable on small screens, so send phones to the buttons. */
+  @media (max-width: 768px) {
+    .cv-embed { display: none; }
+    .cv-fallback { display: none; }
+  }
+</style>
