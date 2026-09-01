@@ -139,6 +139,7 @@ Guides and books by other people that I keep coming back to. All free to read on
 
 - [CUDA Kernels: GPU &amp; Parallel Programming from First Principles](https://arpanpathak.github.io/gpu-parallel-book/) &mdash; GPU programming built up from fundamentals.
 - [ML Engineering Open Book](https://github.com/stas00/ml-engineering) &mdash; field notes from training large models: hardware, debugging, failure modes at scale.
+- [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) &mdash; Google DeepMind's systems view of LLMs on TPUs: roofline analysis, where the bottleneck actually sits, and data, tensor, pipeline and expert parallelism worked through with the arithmetic rather than asserted.
 
 ### Practice
 
