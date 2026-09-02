@@ -144,6 +144,7 @@ Guides and books by other people that I keep coming back to. All free to read on
 ### Practice
 
 - [Made With ML](https://madewithml.com/) &mdash; design, develop, deploy, and iterate on production ML systems, with code.
+- [Machine Learning 150](https://www.ml-150.com/) &mdash; a hundred and fifty machine learning interview questions to work through.
 
 </div>
 
