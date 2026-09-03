@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Project-Demo
+title: Project Demos
 permalink: /project-demo/
-description: Project demonstrations
+description: Interactive demos of things I have built.
 nav: true
 nav_order: 6
 dropdown: true
