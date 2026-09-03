@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Learning with AI
+title: Learning Resources
 permalink: /learning-with-ai/
-description: Open, searchable study guides and interactive books I build and maintain on modern AI — from ML foundations to building, evaluating, and serving agents and LLMs in production.
+description: Open, searchable study guides I build and maintain on modern AI — from ML foundations to building, evaluating, and serving agents and LLMs in production — plus the guides and books by other people that I keep coming back to.
 nav: true
 nav_order: 5.5
 ---
