@@ -3,7 +3,8 @@ layout: page
 permalink: /teaching/
 title: Teaching
 description: Courses I have taught, as a teaching assistant and lab instructor.
-nav: true
+published: false
+nav: false
 nav_order: 5
 ---
 
