@@ -21,6 +21,10 @@ Please use [ffaisal.gmu@gmail.com](mailto:ffaisal.gmu@gmail.com) or [faisalf@orn
 
 <style>
   .email-notice {
+    /* Create a block formatting context so the box sits beside the floated
+       profile image instead of running underneath it. */
+    display: flow-root;
+    overflow: hidden;
     border: 1px solid #d64545;
     border-left: 4px solid #d64545;
     border-radius: 6px;
