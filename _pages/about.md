@@ -14,6 +14,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
+<div class="availability-notice" markdown="1">
+**I am on the job market.** I am looking for tenure-track Assistant Professor positions, and for
+Research Scientist or Research Engineer roles in industry research, based in the United States.
+</div>
+
 <div class="email-notice" markdown="1">
 **My George Mason address, <span class="dead-email">ffaisal@gmu.edu</span>, no longer works** &mdash; I have graduated.
 Please use [ffaisal.gmu@gmail.com](mailto:ffaisal.gmu@gmail.com) or [faisalf@ornl.gov](mailto:faisalf@ornl.gov) instead.
@@ -39,6 +44,21 @@ Please use [ffaisal.gmu@gmail.com](mailto:ffaisal.gmu@gmail.com) or [faisalf@orn
   .email-notice a { color: #d64545; text-decoration: underline; }
   .email-notice a:hover { color: #b02a2a; }
   .email-notice .dead-email { text-decoration: line-through; }
+
+  .availability-notice {
+    display: flow-root;
+    overflow: hidden;
+    border: 1px solid var(--global-divider-color);
+    border-left: 4px solid var(--global-theme-color);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin: 0 0 1rem;
+    color: var(--global-text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .availability-notice p { margin: 0; }
+  .availability-notice strong { color: var(--global-theme-color); }
 </style>
 
 Hi there, I'm Fahim!

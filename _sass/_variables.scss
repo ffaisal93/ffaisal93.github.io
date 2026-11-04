@@ -22,7 +22,10 @@ $light-purple-color:  lighten($purple-color, 25%);
 //$pink-color:          #f92080 !default;
 $pink-color-light:    #ffdddd !default;
 $yellow-color:        #efcc00 !default;
-$pink-color:          #e78173 !default;
+$pink-color:           #8C2F39 !default;  // burgundy accent, light mode, 8.14:1 on white
+$pink-color-hover:     #B03A47 !default;  // lighter burgundy for hover, 5.93:1 on white
+$pink-color-dark-mode: #E0919A !default;  // dark-mode accent, 7.04:1 on the dark background
+$pink-color-dark-hover: #F0B8BF !default; // dark-mode hover, 9.98:1 on the dark background
 $light-pink-color:    lighten($pink-color, 25%);
 
 $grey-color:          #828282 !default;
