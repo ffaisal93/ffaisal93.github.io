@@ -16,7 +16,8 @@ social: false  # includes social icons at the bottom of the page
 
 <div class="availability-notice" markdown="1">
 **I am on the job market.** I am looking for tenure-track Assistant Professor positions, and for
-Research Scientist or Research Engineer roles in industry research, based in the United States.
+Research Scientist, Research Engineer or Machine Learning Engineer roles in industry, based in the
+United States.
 </div>
 
 <div class="email-notice" markdown="1">
