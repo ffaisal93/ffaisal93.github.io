@@ -144,6 +144,10 @@ Guides and books by other people that I keep coming back to. All free to read on
 ### Practice
 
 - [Made With ML](https://madewithml.com/) &mdash; design, develop, deploy, and iterate on production ML systems, with code.
+
+### Interviews and the job search
+
+- [Notes on the Industry Job Search](https://alisawuffles.github.io/blog/job-search/) &mdash; Alisa Liu's account of looking for research scientist roles at the end of an NLP PhD, written up with the real numbers: 11 companies, 57 interviews, 46 recruiter calls. Breaks the interviews into types, gives the study plan she actually used, and is unusually direct about negotiation. Industry only, not faculty.
 - [Machine Learning 150](https://www.ml-150.com/) &mdash; a hundred and fifty machine learning interview questions to work through.
 
 </div>
