@@ -14,8 +14,12 @@ layout: default
 
     {% for doc in page.documents %}
     {% assign doc_url = doc.file | prepend: 'assets/pdf/' | relative_url %}
-    <div class="doc-entry">
-      <h2 class="doc-title">{{ doc.title }}</h2>
+    {% assign doc_anchor = doc.anchor | default: doc.title | slugify %}
+    <div class="doc-entry" id="{{ doc_anchor }}">
+      <h2 class="doc-title">
+        {{ doc.title }}
+        <a href="#{{ doc_anchor }}" class="doc-anchor" aria-label="Link to this document">#</a>
+      </h2>
       {% if doc.meta %}<p class="doc-meta">{{ doc.meta }}</p>{% endif %}
       {% if doc.description %}<p class="doc-description">{{ doc.description }}</p>{% endif %}
 
@@ -23,6 +27,11 @@ layout: default
         <a href="{{ doc_url }}" class="doc-btn" download><i class="fas fa-download"></i> Download PDF</a>
         <a href="{{ doc_url }}" class="doc-btn doc-btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Open in new tab</a>
       </div>
+
+      <p class="doc-permalink">
+        Permanent link:
+        <a href="{{ page.url | absolute_url }}#{{ doc_anchor }}"><code>{{ page.url | absolute_url }}#{{ doc_anchor }}</code></a>
+      </p>
 
       {% if doc.embed %}
       <div class="doc-embed">
@@ -53,6 +62,26 @@ layout: default
   .doc-title {
     margin-bottom: 0.3rem;
   }
+  .doc-anchor {
+    opacity: 0;
+    margin-left: 0.3rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: opacity 0.15s ease-in-out;
+  }
+  .doc-title:hover .doc-anchor,
+  .doc-anchor:focus { opacity: 0.55; }
+  .doc-permalink {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 1rem;
+    word-break: break-all;
+  }
+  .doc-permalink code {
+    font-size: 0.85em;
+  }
+  /* The browser must not hide an anchored entry behind the fixed header. */
+  .doc-entry { scroll-margin-top: 5rem; }
   .doc-meta {
     font-size: 0.9rem;
     color: var(--global-text-color-light);
