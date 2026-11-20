@@ -1,0 +1,115 @@
+---
+layout: default
+---
+<!-- _layouts/documents.html -->
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
+
+  <article>
+    {{ content }}
+
+    {% for doc in page.documents %}
+    {% assign doc_url = doc.file | prepend: 'assets/pdf/' | relative_url %}
+    <div class="doc-entry">
+      <h2 class="doc-title">{{ doc.title }}</h2>
+      {% if doc.meta %}<p class="doc-meta">{{ doc.meta }}</p>{% endif %}
+      {% if doc.description %}<p class="doc-description">{{ doc.description }}</p>{% endif %}
+
+      <div class="doc-actions">
+        <a href="{{ doc_url }}" class="doc-btn" download><i class="fas fa-download"></i> Download PDF</a>
+        <a href="{{ doc_url }}" class="doc-btn doc-btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Open in new tab</a>
+      </div>
+
+      {% if doc.embed %}
+      <div class="doc-embed">
+        <object data="{{ doc_url }}" type="application/pdf">
+          <iframe src="{{ doc_url }}" title="{{ doc.title }}" loading="lazy">
+            <p>Your browser cannot display the PDF inline. <a href="{{ doc_url }}">Download it instead</a>.</p>
+          </iframe>
+        </object>
+      </div>
+      <p class="doc-fallback">
+        If the document does not appear above, your browser is blocking inline PDFs.
+        <a href="{{ doc_url }}">Download the PDF directly</a>.
+      </p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </article>
+</div>
+
+<style>
+  .doc-entry {
+    margin-bottom: 2.5rem;
+  }
+  .doc-entry + .doc-entry {
+    padding-top: 2rem;
+    border-top: 1px solid var(--global-divider-color);
+  }
+  .doc-title {
+    margin-bottom: 0.3rem;
+  }
+  .doc-meta {
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.6rem;
+  }
+  .doc-description {
+    margin-bottom: 0.8rem;
+  }
+  .doc-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0;
+  }
+  .doc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--global-theme-color);
+    background-color: var(--global-theme-color);
+    color: var(--global-bg-color) !important;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: opacity 0.15s ease-in-out;
+  }
+  .doc-btn:hover { opacity: 0.82; text-decoration: none; }
+  .doc-btn-secondary {
+    background-color: transparent;
+    color: var(--global-theme-color) !important;
+  }
+  .doc-embed {
+    width: 100%;
+    height: 85vh;
+    min-height: 500px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--global-card-bg-color);
+  }
+  .doc-embed object,
+  .doc-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .doc-fallback {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+  /* Inline PDF viewers are unreliable on small screens, so send phones to the buttons. */
+  @media (max-width: 768px) {
+    .doc-embed { display: none; }
+    .doc-fallback { display: none; }
+  }
+</style>
