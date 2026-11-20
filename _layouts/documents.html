@@ -24,8 +24,16 @@ layout: default
       {% if doc.description %}<p class="doc-description">{{ doc.description }}</p>{% endif %}
 
       <div class="doc-actions">
-        <a href="{{ doc_url }}" class="doc-btn" download><i class="fas fa-download"></i> Download PDF</a>
-        <a href="{{ doc_url }}" class="doc-btn doc-btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Open in new tab</a>
+        <a href="{{ doc_url }}" class="doc-btn" download>
+          <i class="fas fa-file-pdf"></i> Download PDF{% if doc.pdf_size %} <span class="doc-size">({{ doc.pdf_size }})</span>{% endif %}
+        </a>
+        {% if doc.source %}
+        {% assign source_url = doc.source | prepend: 'assets/pdf/' | relative_url %}
+        <a href="{{ source_url }}" class="doc-btn" download>
+          <i class="fas fa-file-powerpoint"></i> Download PowerPoint{% if doc.source_size %} <span class="doc-size">({{ doc.source_size }})</span>{% endif %}
+        </a>
+        {% endif %}
+        <a href="{{ doc_url }}" class="doc-btn doc-btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Open PDF in new tab</a>
       </div>
 
       <p class="doc-permalink">
@@ -111,6 +119,10 @@ layout: default
     transition: opacity 0.15s ease-in-out;
   }
   .doc-btn:hover { opacity: 0.82; text-decoration: none; }
+  .doc-size {
+    font-size: 0.85em;
+    opacity: 0.75;
+  }
   .doc-btn-secondary {
     background-color: transparent;
     color: var(--global-theme-color) !important;

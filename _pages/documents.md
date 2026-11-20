@@ -14,5 +14,8 @@ documents:
       the full dissertation: how language models fail on low-resource languages
       and dialects, and the adaptation methods I studied to close that gap.
     file: fahim_faisal_dissertation_defense_slides.pdf
+    pdf_size: 12.7 MB
+    source: fahim_faisal_dissertation_defense_slides.pptx
+    source_size: 50.8 MB
     embed: true
 ---
